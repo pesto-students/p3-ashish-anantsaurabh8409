@@ -1,0 +1,76 @@
+.box{  
+    width: 100px;
+    height: 100px;
+}
+.main-box{
+  padding: 50px;
+}
+.first-box{
+  display: grid;
+  justify-content: start;
+  max-width: 200px;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  position: relative;
+}
+.first-box span {
+  position: absolute;
+  top: 40%;
+  z-index: 0;
+  left: 45%;
+  mix-blend-mode: color-dodge;
+}
+.red {
+    background-color: red;
+    transform-origin: top left;
+}
+
+.yellow{
+    background-color: rgb(228, 248, 6);
+    transform-origin: top right;
+}
+
+.blue{
+    background-color: blue;
+    transform-origin: bottom left;
+}
+
+.green{
+    background-color: green;
+    transform-origin: bottom right;
+    
+}
+
+.first-box .box{
+    -webkit-transition: -webkit-transform 1s ease-in;
+}
+
+.first-box:hover .box.green,
+.first-box:hover .box.red {
+  transform: rotate(90deg);
+}
+.first-box:hover .box.blue,
+.first-box:hover .box.yellow {
+  transform: rotate(-90deg);
+}
+
+
+
+/* .box {
+    background: lightblue;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    transition: transform 1s linear;
+    transform-origin: top left;
+    transform-style: preserve-3D;
+  }
+  
+  .box-rotate {
+    transform: rotate(360deg);
+  }
+  
+  button {
+    display: block;
+    margin: auto;
+  } */
